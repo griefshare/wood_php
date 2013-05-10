@@ -40,6 +40,7 @@ elseif( $_COOKIE['logged_in'] == 1 ){
 <head>
 <meta charset="utf-8">
 <title>Log in to your account</title>
+<link href="format.css" rel="stylesheet" type="text/css"  media="screen"/>
 </head>
 
 <body>
@@ -48,23 +49,26 @@ elseif( $_COOKIE['logged_in'] == 1 ){
 if( !$_SESSION['logged_in'] == 1 ){
 ?>
 
-	<h1>Log In!</h1>
+	
 
-	<?php 
+	
+
+	<form method="post" action="login_cookie_session.php">
+		<h1>Log In!</h1>
+	
+<?php 
 	//if an error was triggered, show a message
 	if( $error ){
-			echo 'Username and password do not match. Try again.';
+			echo '<div class="error">Username and password do not match. Try again.</div>';
 	}
 	?>
 
-	<form method="post" action="login_cookie_session.php">
-		
 	<label for="username">Username:</label>
-		<input type="text" name="username" id="username">
+		<input type="text" name="username" id="username" placeholder="username">
 		<br />
 
 		<label for="password">Password:</label>
-		<input type="password" name="password" id="password">
+		<input type="password" name="password" id="password" placeholder="password">
 		<br />
 
 		<input type="submit" value="Log In">
