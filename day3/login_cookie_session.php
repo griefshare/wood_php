@@ -79,7 +79,9 @@ if( !$_SESSION['logged_in'] == 1 ){
 else{ ?>
 
 	<p>You are logged in!</p>
+	<div class="logout">
 	<p><a href="login_cookie_session.php?action=logout">Log Out</a></p>
+	</div>
 
 <?php }?>
 
