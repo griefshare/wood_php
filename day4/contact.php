@@ -34,9 +34,10 @@ if( $_POST['did_submit'] ):
 	//handle success/failure user feedback
 	if( $did_send ):
 		$display_msg = 'Thank you, ' . $name . ', for your message. I will get back to you soon.';
+		$css_class = 'success';
 	else:
 		$display_msg = 'Sorry, there was a problem sending your message.';
-
+		$css_class = 'error';
 	endif; //did_send
 
 endif;	//did_submit
@@ -63,6 +64,10 @@ form {
 	box-shadow: 10px 10px 5px #888888;
 	border: 1px solid #D7D7D7;
 }
+input[type=text] {
+		width: 60%;
+}
+
 
 input[type=text],
 input[type=submit],
@@ -94,12 +99,22 @@ h1 {
 	-webkit-text-stroke: 5px white;
 }
 .display {
-	background-color: #FFF;
+	background-color: #E7F8F3;
 	padding: 10px;
 	margin-bottom: 15px;
 	font-family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
 	font-style: italic;
 	color: #829AB5;
+}
+.success {
+	font-family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+	font-style: italic;
+	color: #445060;
+	width: 80%;
+	padding: 20px;
+	background-color: #849E91; 
+	box-shadow: 10px 10px 5px #888888;
+	border: 1px solid #D7D7D7;
 }
 </style>
 
@@ -109,20 +124,23 @@ h1 {
 
 <body>
 <div id="container">
+
+
 	<header>
 		<h1>Contact</h1>
 	</header>
 	
-
-	<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-		
-		<div class="display"><?php 
+	<?php 
 	if( isset($display_msg) ):
+		echo "<div class='$css_class'>";
 		echo $display_msg;
+		echo '</div>';
 	endif;
-	?></div
-</br>
-
+	?>
+	<?php  	
+	//gide the form if it sent correctly
+	if (!$did_send): ?>
+	<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 		<label for ="name">Your Name:</label>
 		<input type="text" name="name" id="name" placeholder="Your name"/>
 
@@ -141,6 +159,8 @@ h1 {
 		<input type="submit" value="Send Message">
 		<input type="hidden" name="did_submit" value="1" />
 	</form>
+	<?php endif; //hide form if did_send ?>
+
 </div>
 </body>
 </html>
