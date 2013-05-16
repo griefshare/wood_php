@@ -187,7 +187,8 @@ h1 {
 		<textarea name="message" id="message"> <?php sticky_field($message); ?></textarea>
 		<?php display_error( $errors, 'message' ); ?>
 
-		<input type="checkbox" name="newsletter" value="1" id="newsletter" <?php checked( 'YES!', $newsletter ); ?> />
+		<input type="checkbox" name="newsletter" value="1" id="newsletter" 
+		<?php checked( 'YES!', $newsletter ); ?> />
 		<label for="newsletter">I would like to receive the newsletter!</label>
 
 		<input type="submit" value="Send Message">
