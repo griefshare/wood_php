@@ -1,4 +1,5 @@
-<?php require('db_connect.php'); ?>
+<?php require('db_connect.php'); 
+include_once( 'functions.php'); ?>
 <!doctype html>
 <html>
 <head>
@@ -25,8 +26,12 @@
 		switch( $_GET['page'] ){
 			case 'blog':
 				include( 'content_blog.php' );
-				case 'links':
+			break;
+			case 'links':
 				include( 'content_links.php' );
+			break;
+			case 'single':
+				include( 'content_single.php' );
 			break;
 			default:
 			    include( 'content_home.php' );
