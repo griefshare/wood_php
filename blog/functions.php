@@ -13,7 +13,7 @@ return $dateR;
 }
 
 //show the number of comments on any post with good grammar
-//@var $number int
+//@param $number int
 function comments_number($number){
 	if ( $number == 1){
 		echo 'One comment';
@@ -22,4 +22,13 @@ function comments_number($number){
 	}else{
 		echo "$number comments";
 	}
+}
+
+/**
+ * Sanitizer for database inputs
+ * @param $input mixed - pass any 'dirty' form field
+ * @param $link mysqli database connection
+ */
+function clean_input( $input, $link ){
+	return mysqli_real_escape_string($link, strip_tags(trim($input)) );
 }
