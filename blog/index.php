@@ -6,6 +6,7 @@ include_once( 'functions.php'); ?>
 <meta charset="utf-8">
 <title>Dan's PHP Blog</title>
 <link href="format.css" rel="stylesheet" type="text/css" media="screen" />
+<link rel="alternate" type="application/rss+xml" title="Rss Feed of Blog Posts" href="rss.php" />
 </head>
 
 <body>

@@ -4,17 +4,27 @@ body {
 	font-family: "Myriad Pro", Verdana, Geneva, sans-serif;
 }
 #container {
-	padding: 0 10% 0 2%;
+	width: 65%;
+	padding: 0 0 0 2%;
 	height: 100%;
 }
 main {
 	float: left;
 	padding-right: 10%;
-	max-width: 60%;
+	max-width: 50%;
 }
 aside {
 	margin-left: 60%;
+	min-width: 20%;
+	max-width: 30%;
+	margin-top: 30px;
+	padding: 20px 0px 20px 20px;
+	background-color: #E2E2E0;
 }
+#global {
+	text-align: left;
+}
+
 #global ul {
 	position: relative;
 }
@@ -26,7 +36,6 @@ aside {
 	display: block;
 	width: 100%;
 	margin-right: 20px;
-	text-align: left;
 }
 aside ul {
 	list-style: none;

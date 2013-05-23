@@ -24,8 +24,7 @@
 				<?php echo $row['title']; ?></a></h3>
 		
 
-			<div class="postmeta">Posted on
-						<?php echo convert_date( $row[ 'date' ]); ?>
+			<div class="postmeta">Posted on <?php echo convert_date( $row[ 'date' ]); ?>
 				 | in the category <?php echo $row['name']; ?>
 				 | by <?php echo $row['username']; ?>
 			</div>
