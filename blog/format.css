@@ -2,9 +2,10 @@
 /* CSS Document */
 body {
 	font-family: "Myriad Pro", Verdana, Geneva, sans-serif;
+	background: url('images/paper.png');
 }
 #container {
-	width: 65%;
+	width: 60%;
 	padding: 0 0 0 2%;
 	height: 100%;
 }
@@ -13,55 +14,236 @@ main {
 	padding-right: 10%;
 	max-width: 50%;
 }
-aside {
-	margin-left: 60%;
-	min-width: 20%;
-	max-width: 30%;
-	margin-top: 30px;
-	padding: 20px 0px 20px 20px;
-	background-color: #E2E2E0;
-}
-#global {
-	text-align: left;
+h1 a {
+	font-family: 'FreebooterScriptRegular';
+	font-size: 48px;
+	text-decoration: none;
+	color: #000;
 }
 
+h2 {
+	font-family: 'im_fell_english_proregular';
+	margin-top: 0;
+}
+p {
+	font-family: 'BenthamRegular';
+}
+/*global nav*/
 #global ul {
 	position: relative;
+	text-align: left;
+	height: 20px;
+	padding: 0;
+	margin: 0 0 50px 0;
+
+	width: 50%;
 }
 #global ul li {
 	display: inline;
 	float: left;
+	padding: 0;
+	margin: 0;
 }
 #global ul li a {
 	display: block;
 	width: 100%;
-	margin-right: 20px;
+	margin-right: 30px;
+	color: #000;
+	text-decoration: none;
+	font-family: 'BenthamRegular';
+}
+#global ul li a:visited {
+	color: #000;
+}
+#global ul li a:hover {
+	color: #9A1C1F;
+}
+.line{
+	border-bottom: 1px solid #000;
+	width: 60%;
+	margin: -40px 0 45px 0;
+}
+/* Posts */
+.posts h3 {
+	color: #9A1C1F;
+	font-family: 'im_fell_english_proitalic';
+	font-size: 20px;
+	margin-top: 5px;
+}
+.posts h3 a {
+	color: #9A1C1F;
+	font-family: 'im_fell_english_proitalic';
+	font-size: 20px;
+	margin-top: 5px;
+}
+.posts h3 a:hover {
+	color: #969684;
+}
+.postmeta {
+	font-family: 'BenthamRegular';
+	color: #969684;
+	font-size: 14px;
+	margin-top: -10px;
+}
+#comments h3 {
+	color: #000;
+	font-family: 'im_fell_english_proitalic';
+	font-size: 20px;
+	margin-top: 5px;
+}
+#comments h4 {
+	color: #000;
+	font-family: 'BenthamRegular';
+}
+#comments ol {
+	padding-bottom: 20px;
+}
+time {
+	color: #000;
+	font-family: 'BenthamRegular';
+}
+#commentform h3 {
+	border-top: 1px solid #000;
+}
+#commentform h3 {
+	color: #000;
+	font-family: 'im_fell_english_proitalic';
+	font-size: 20px;
+	margin-top: 5px;
+}
+/* ASIDE  */
+aside {
+	margin-left: 60%;
+	min-width: 20%;
+	max-width: 30%;
+	margin-top: 50px;
+	padding: 0 0px 20px 20px;
+	border-left: 1px solid #000;
 }
 aside ul {
 	list-style: none;
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+aside ul li {
+	list-style: none;
+	margin: 0;
+	padding: 0 0 5px 0;
 }
 aside ul li a {
 	text-decoration: none;
+	color: #000;
+	font-family: 'im_fell_english_proitalic';
 }
-
+aside ul li a:hover {
+	color: #9A1C1F;
+}
+h2 {
+	font-family: 'im_fell_english_proregular';
+	margin: 10px 0 10px 0;
+}
+aside h2.rss {
+	margin: 0 0 40px 0;
+	padding-top: 5px;
+}
+aside h2 a {
+	color: #9A1C1F;
+	margin-bottom: 40px;
+}
+/* Comments */
 label, textarea, input {
 	display: block;
 }
 label {
 	padding-bottom: 5px;
+	font-family: 'BenthamRegular';
 }
 
 input {
 	margin-bottom: 20px;
-	width: 60%;
+	width: 80%;
+	font-family: 'BenthamRegular';
 }
 input[type="submit"] {
 	width: 110px;
 	margin-top: 20px;
 }
 textarea {
-	width: 60%;
+	width: 80%;
+	font-family: 'BenthamRegular';
 }
+/* links */
+.links ul li a {
+	text-decoration: none;
+	color: #000;
+	font-family: 'BenthamRegular';
+}
+.links ul li a:hover {
+	color: #9A1C1F;
+}
+
+/* fonts */
+@font-face {
+    font-family: 'im_fell_english_proitalic';
+    src: url('fonts/feenit27c-webfont.eot');
+    src: url('fonts/feenit27c-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/feenit27c-webfont.woff') format('woff'),
+         url('fonts/feenit27c-webfont.ttf') format('truetype'),
+         url('fonts/feenit27c-webfont.svg#im_fell_english_proitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'im_fell_english_proregular';
+    src: url('fonts/feenrm28c-webfont.eot');
+    src: url('fonts/feenrm28c-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/feenrm28c-webfont.woff') format('woff'),
+         url('fonts/feenrm28c-webfont.ttf') format('truetype'),
+         url('fonts/feenrm28c-webfont.svg#im_fell_english_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'FreebooterScriptRegular';
+    src: url('fonts/freebooterscript-webfont.eot');
+    src: url('fonts/freebooterscript-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/freebooterscript-webfont.woff') format('woff'),
+         url('fonts/freebooterscript-webfont.ttf') format('truetype'),
+         url('fonts/freebooterscript-webfont.svg#FreebooterScriptRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'FreebooterScript-AltsRegular';
+    src: url('fonts/FREEBSCA-webfont.eot');
+    src: url('fonts/FREEBSCA-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/FREEBSCA-webfont.woff') format('woff'),
+         url('fonts/FREEBSCA-webfont.ttf') format('truetype'),
+         url('fonts/FREEBSCA-webfont.svg#FreebooterScript-AltsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'BenthamRegular';
+    src: url('fonts/Bentham-webfont.eot');
+    src: url('fonts/Bentham-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Bentham-webfont.woff') format('woff'),
+         url('fonts/Bentham-webfont.ttf') format('truetype'),
+         url('fonts/Bentham-webfont.svg#BenthamRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
 
 
 /*Clearfix*/

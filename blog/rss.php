@@ -14,11 +14,11 @@ function convTimestamp($date){
 echo '<?xml version="1.0" encoding="utf-8" ?>'; ?>
 <rss version="2.0">
 	<channel>
-		<title>Dan's Blog</title>
+		<title>Musings and Machinations</title>
 		<link>http://localhost/wood_php/blog/index.php</link>
 		<description>A blog about nothing</description>
 		<image>
-			<title>Dan's Blog</title>
+			<title>Musings and Machinations/title>
 			<url>http://localhost/wood_php/blog/images/happy-sloth-647x400.jpg</url>
 			<link>http://localhost/wood_php/blog/index.php</link>
 		</image>

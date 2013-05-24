@@ -12,19 +12,20 @@ include_once( 'functions.php'); ?>
 <body>
 <div id="container" class="cf">
 	<header>
-		<h1>Dan's Blog</h1>
+		<h1><a href="index.php">Musings and Machinations</a></h1>
 		<nav id="global">
-			<ul>
+			<ul>  
 				<li><a href="index.php">Home</a></li>
 				<li><a href="index.php?page=blog">Blog</a></li>
 				<li><a href="index.php?page=links">Links</a></li>
 			</ul>
-		</nav>	
+		</nav>
+		<div class="line"></div>	
 	</header>
 
-<div class="cf nglobal"></div>
 
-	<main>
+
+	<main class="cf">
 	<?php
 	//logic to load the correct page contents.
 	//URI will look like /index.php?page=something
